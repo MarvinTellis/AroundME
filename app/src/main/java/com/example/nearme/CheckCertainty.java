@@ -32,12 +32,13 @@ public class CheckCertainty extends Activity implements LocationListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_certainty);
         try {
-            File myFile = new File("/sdcard/.emergencyNumbers.txt");
-            FileInputStream fIn = new FileInputStream(myFile);
+            FileInputStream fIn = openFileInput("emergencycontacts.txt");
             BufferedReader myReader = new BufferedReader(
                     new InputStreamReader(fIn));
             No1 = myReader.readLine();
+            System.out.println("MARVIN -->"+No1);
             No2 = myReader.readLine();
+            System.out.println("MARVIN -->"+No2);
             myReader.close();
         } catch (Exception e) {
             Toast.makeText(getBaseContext(), e.getMessage(),

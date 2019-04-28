@@ -12,7 +12,7 @@
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClick"
+        android:onClick="sendMess"
         android:text="Fall Detection"
         android:layout_alignParentLeft="true" />
 

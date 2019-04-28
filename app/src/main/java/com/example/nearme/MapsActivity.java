@@ -64,6 +64,16 @@ LocationListener{
         mapFragment.getMapAsync(this);
     }
 
+
+    public void sendMess(View view)
+    {
+        System.out.println("HERE");
+        Intent in = new Intent(MapsActivity.this,MainActivity.class);
+        startActivity(in);
+    }
+
+
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch(requestCode)
@@ -139,11 +149,6 @@ LocationListener{
 
         switch(v.getId())
         {
-            case R.id.B_search:
-                // Fall detection code
-                Intent in = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(in);
-                break;
             case R.id.B_hopistals:
                 mMap.clear();
                 String hospital = "hospital";
